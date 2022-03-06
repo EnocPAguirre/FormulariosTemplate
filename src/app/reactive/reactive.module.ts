@@ -16,6 +16,6 @@ import { SwitchesComponent } from './switches/switches.component';
   imports: [
     CommonModule,
     ReactiveRoutingModule
-  ]
+  ],
 })
 export class ReactiveModule { }

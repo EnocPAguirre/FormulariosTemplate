@@ -16,6 +16,7 @@ import { SwitchesComponent } from './switches/switches.component';
   imports: [
     CommonModule,
     TemplateRoutingModule
-  ]
+  ],
+  
 })
 export class TemplateModule { }
