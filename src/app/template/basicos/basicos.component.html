@@ -2,24 +2,24 @@
 <hr />
 <div class="row">
   <div class="col">
-    <form action="">
+    <form action="" (ngSubmit)="guardar(miFormulario)" #miFormulario="ngForm">
       <div class="mb-3 row">
         <label class="col-sm-3 col-form-label">Producto</label>
         <div class="col-sm-9">
-          <input type="text" class="form-control" />
+          <input type="text" ngModel name="producto" class="form-control" />
           <span class="form-text text-danger">Debe ser de 3 letras</span>
         </div>
       </div>
       <div class="mb-3 row">
         <label class="col-sm-3 col-form-label">Precio</label>
         <div class="col-sm-9">
-          <input type="number" class="form-control" />
+          <input type="number" ngModel name="precio" class="form-control" />
         </div>
       </div>
       <div class="mb-3 row">
         <label class="col-sm-3 col-form-label">Existencias</label>
         <div class="col-sm-9">
-          <input type="number" class="form-control" />
+          <input type="number" ngModel name="existencias" class="form-control" />
         </div>
       </div>
       <div class="row">
@@ -31,4 +31,13 @@
       </div>
     </form>
   </div>
+</div>
+
+<div class="row">
+  <div class="row">
+    <span>Valid</span>
+    <pre>{{miFormulario.value | json}}
+    </pre>
+  </div>
+
 </div>
