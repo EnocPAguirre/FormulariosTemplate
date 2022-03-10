@@ -2,18 +2,36 @@
 <hr />
 <div class="row">
   <div class="col">
-    <form action="" (ngSubmit)="guardar(miFormulario)" #miFormulario="ngForm">
+    <form action="" (ngSubmit)="guardar()" #miFormulario="ngForm">
       <div class="mb-3 row">
         <label class="col-sm-3 col-form-label">Producto</label>
         <div class="col-sm-9">
-          <input type="text" ngModel name="producto" class="form-control" />
-          <span class="form-text text-danger">Debe ser de 3 letras</span>
+          <input
+            type="text"
+            ngModel
+            name="producto"
+            class="form-control"
+            required
+            minlength="3"
+          />
+          <span
+            class="form-text text-danger"
+            *ngIf="nombreValido()"
+            >Debe ser de 3 letras</span
+          >
         </div>
       </div>
       <div class="mb-3 row">
         <label class="col-sm-3 col-form-label">Precio</label>
         <div class="col-sm-9">
-          <input type="number" ngModel name="precio" class="form-control" />
+          <input
+            type="number"
+            ngModel
+            name="precio"
+            class="form-control"
+            required
+            min="1"
+          />
         </div>
       </div>
       <div class="mb-3 row">
@@ -24,6 +42,8 @@
             ngModel
             name="existencias"
             class="form-control"
+            required
+            min="1"
           />
         </div>
       </div>
