@@ -21,6 +21,12 @@ nombreValido(){
    this.miFormulario 
   }
 
+  precioValido(){
+    this.miFormulario.controls['precio'].setErrors(null);
+    return this.miFormulario.controls['precio'].touched ||
+    this.miFormulario.controls['precio'].value > 0
+  }
+
   constructor() { }
 
   ngOnInit(): void {
