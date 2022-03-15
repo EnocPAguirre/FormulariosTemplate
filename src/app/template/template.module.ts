@@ -6,18 +6,20 @@ import { BasicosComponent } from './basicos/basicos.component';
 import { DinamicosComponent } from './dinamicos/dinamicos.component';
 import { SwitchesComponent } from './switches/switches.component';
 import { FormsModule } from '@angular/forms';
+import { customMinDirective } from './directives/custom-min.directive';
 
 
 @NgModule({
   declarations: [
     BasicosComponent,
     DinamicosComponent,
-    SwitchesComponent
+    SwitchesComponent,
+    customMinDirective
   ],
   imports: [
     CommonModule,
     FormsModule,
-    TemplateRoutingModule
+    TemplateRoutingModule,
   ],
   
 })
