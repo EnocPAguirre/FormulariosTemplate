@@ -17,7 +17,7 @@ interface Favorito {
   ]
 })
 export class DinamicosComponent implements OnInit {
-
+  nuevoJuego: string  = '';
   persona: Persona = {
     nombre: 'Enoc',
     favoritos: [{
@@ -31,6 +31,16 @@ export class DinamicosComponent implements OnInit {
   }
 
   guardar(){
+
+  }
+
+  agregarJuego(){
+    const nuevoFavorito: Favorito = {} as Favorito;
+    nuevoFavorito.id = this.persona.favoritos.length +1;
+    nuevoFavorito.nombre = this.nuevoJuego;
+
+    this.persona.favoritos.push({...nuevoFavorito});
+    this.nuevoJuego = '';
 
   }
 
